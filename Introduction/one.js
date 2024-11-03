@@ -1,3 +1,6 @@
+//Repo link: https://github.com/ProgrammingHero1/introduction-to-JavaScript.git
+//task link: https://github.com/ProgrammingHero1/intro-to-js-tasks.git
+
 // 17-1 Introduction to JavaScript
 
 //Type "log" for console.log() suggestion.
