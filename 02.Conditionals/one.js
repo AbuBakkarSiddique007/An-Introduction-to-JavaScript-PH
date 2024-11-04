@@ -1,6 +1,5 @@
 //Repo link: https://github.com/ProgrammingHero1/js-conditionals.git
-
-//task Link: 
+//task Link: https://github.com/ProgrammingHero1/JS-conditionals-tasks.git
 
 
 // 18_1 Compare variables and Comparison operator
@@ -133,3 +132,143 @@ const hasCar = false;
 
 
 //18_6 Multi level If-else if-else condition
+
+const productPrice = 4000
+if (productPrice >= 5000) {
+    let discount = productPrice * 10 / 100
+    let payAmount = productPrice - discount
+    console.log(
+        `WOW! You get 10% discount in the product which is : ${discount}.
+    You payAmount is: ${payAmount}`);
+}
+
+else if (productPrice >= 4000) {
+    let discount = productPrice * 5 / 100
+    let payAmount = productPrice - discount
+    console.log(
+        `WOW! You get 5% discount in the product. which is : ${discount}
+    You payAmount is: ${payAmount}`);
+}
+
+else {
+    console.log("pay the full payment!");
+
+}
+
+
+//18_7 (optional) Nested if-else condition
+
+const money = -10;
+if (money > 300) {
+    console.log('bro you are rich!!!');
+}
+else {
+    if (money > 100) {
+        console.log('tui gorib o na boro lok o na')
+    }
+    else {
+        if (money > 0) {
+            console.log('dosto kola kha.calcium bara')
+        }
+        else {
+            console.log('tui amar bondhu na. ')
+        }
+    }
+}
+
+//18_8 (advanced )If-else shorthand Ternary Operator
+
+/**
+ * TERNARY --> three parts
+ * 
+ *   ?    :
+ * 
+ *  condition ? do something when true : do something when false
+*/
+
+const age = 112;
+
+// normal if-else
+// if(age >=18){
+//     console.log('You can vote.')
+// }
+// else {
+//     console.log('Ghumai thako')
+// }
+
+
+// simple ternary
+age >= 18 ? console.log('Vote Dio') : console.log('Ghumai thako')
+
+let price = 500;
+const isLeader = false;
+
+if (isLeader === true) {
+    price = 0;
+}
+else {
+    price = price + 100;
+}
+// console.log(price)
+
+price = isLeader === true ? 0 : price + 100;
+
+
+
+//semi-advanced ternary
+if (isLeader === true) {
+    if (price > 1000) {
+        price = price / 2;
+    }
+    else {
+        price = 0;
+    }
+}
+else {
+    price = price + 1000;
+}
+
+
+
+// price = isLeader === true ? price > 1000 ? price /2 : 0 : price + 1000;
+
+//or:
+price = isLeader === true ?
+    price > 1000 ?
+        price / 2 : 0
+    : price + 1000;
+
+
+
+// 18_9(advanced) Logical Not Operator
+
+// const isLeader = true;
+// if(isLeader === true)
+if (isLeader) {
+    console.log('leader asche! chair charo');
+}
+else {
+    console.log('vitore dukte dibi na');
+}
+
+const isPassed = true;
+// if(isPassed === false)
+if (!isPassed) {
+    console.log('toke biya diya dimu');
+}
+else {
+    console.log('tumi amader noyon er moni')
+}
+
+
+
+
+
+// !true        //return false
+// !false       //return true
+// !""          //return true
+// !"cat"       //return false
+
+
+
+//18_10 Homework and Making Decisions in your code
