@@ -97,6 +97,9 @@
 // The sum is : 55
 
 //Even:
+// a % 2 ===0  => even
+//a % 2 !==1   =>even
+
 // let b = 2;
 
 // while (b <= 10) {
@@ -136,19 +139,15 @@
 // }
 
 
-// for(let valueOne = 0; valueOne <=10; valueOne++){
+// for(let valueOne = 1; valueOne <=10; valueOne++){
 //     console.log(`Hello World! ${valueOne}`);
-//     valueOne++;
 // }
 
-// Hello World! 0
-// Hello World! 2
-// Hello World! 4
-// Hello World! 6
-// Hello World! 8
-// Hello World! 10
 
 //Odd:
+//n % 2 ===1 => for positive odd
+//n % 2 !== 0
+
 // for (let a = 1; a <= 10; a++) {
 //     if (a % 2 != 0) {
 //         console.log(`The odd value is: ${a}`);
@@ -207,3 +206,120 @@
 
 
 //19_6 Different ways to use loop
+
+//odd number:
+// for (let i = 0; i <= 20; i++) {
+//     if (i % 2 === 1) {
+//         console.log(i);
+
+//     }
+// }
+
+//Divisible by 5 from 1 to 30
+// for (let x = 1; x <= 30; x++) {
+//     if (x % 5 == 0) {
+//         console.log(x);
+//     }
+// }
+
+// 5
+// 10
+// 15
+// 20
+// 25
+// 30
+
+//Divisible by 5 or 3 from 1 to 30
+// for (let x = 1; x <= 30; x++) {
+//     if (x % 3 === 0 || x % 5 === 0) {
+//         console.log(x);
+//     }
+// }
+
+// 3
+// 5
+// 6
+// 9
+// 10
+// 12
+// 15
+// 18
+// 20
+// 21
+// 24
+// 25
+// 27
+// 30
+
+
+//19_7 When to use a break and continue
+//Break:
+// for (let y = 0; y <= 20; y++) {
+//     console.log(y);
+
+//     if (y >= 5) {
+//         break;
+//     }
+// }
+
+
+//Continue:
+// for(let i = 1; i <= 20; i++){
+//     if(i % 2 ===1){
+//         continue;
+//     }
+//     console.log(i);
+
+// }
+
+// 2
+// 4
+// 6
+// 8
+// 10
+// 12
+// 14
+// 16
+// 18
+// 20
+
+
+// 19_8 (optional) Introduction to Do While Loop
+
+
+//while:
+// let i = 0
+// while (i < 5) {
+//     console.log(i);
+//     i++
+// }
+
+
+//do-while:
+
+// let a = 0;
+// do {
+//     console.log(a);
+//     a++
+// }
+// while (a < 5)
+
+// 0
+// 1
+// 2
+// 3
+// 4
+
+let b = 10;
+do {
+    console.log(b);
+    b++
+}
+while (b < 5)
+
+//Output:
+// 10
+
+//The block of code inside the loop is executed
+// at least once, even if the condition is false from the start.
+
