@@ -231,9 +231,44 @@ let liquid = " water "
 
 
 //includes:
-
 // console.log(lastName.includes('d'));    //true
-
 // console.log(lastName.includes('x'));    //false
 
+
+//20_4 Reverse a String in Three different ways
+
+
+//Reverse string:
+// let name = "Abu Bakkar Siddique"
+
+// let reverse = ""
+// for (let letter of name) {
+//     reverse = letter + reverse
+
+    //1st iteration:
+    //reverse = A = A
+    //2nd iteration
+    //reverse = b+A => bA
+    //3rd iteration:
+    //reverse = u+bA => ubA
+// }
+// console.log(reverse);
+
+
+//Another Way:
+// for (let i = 0; i < name.length; i++) {
+    // console.log(name[i]);
+    // reverse = name[i]+reverse
+// }
+// console.log(reverse);
+//euqiddiS rakkaB ubA
+
+
+
+//shortcut:
+// let name = "Abu Bakkar Siddique"
+
+// let reversed = name.split('').reverse().join('')
+// console.log(reversed);
+//euqiddiS rakkaB ubA
 
