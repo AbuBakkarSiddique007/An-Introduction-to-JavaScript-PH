@@ -1,6 +1,9 @@
 //Repo link: https://github.com/ProgrammingHero1/js-string-object.git
 
-//Task: 
+//Object Task: https://github.com/ProgrammingHero1/js-object-tasks.git
+//String Task: https://github.com/ProgrammingHero1/js-string-tasks.git
+
+
 
 // console.log("Hello World!");
 
