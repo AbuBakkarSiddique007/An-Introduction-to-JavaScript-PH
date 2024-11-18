@@ -1,5 +1,5 @@
 //Repo link: https://github.com/ProgrammingHero1/js-array-more.git
-
+//Tas Link:  https://github.com/ProgrammingHero1/array-looping-tasks.git
 
 
 //20.5_1 Array Traversal using for and while Loop
@@ -78,7 +78,7 @@ let a = [1, 2, 3, 4, 5, 6]
 //unshift => Insert new element start of the array
 // let empt_a = []
 // for (const aa of a) {
-    // console.log(aa);
+// console.log(aa);
 //     empt_a.unshift(aa)
 
 // }
@@ -102,15 +102,25 @@ let a = [1, 2, 3, 4, 5, 6]
 
 //reverse side array:
 let temp_arr = []
-for (let i = a.length - 1; i >= 0; i--){
+for (let i = a.length - 1; i >= 0; i--) {
     let num = a[i]
     // console.log(num);
 
     temp_arr.push(num)
 
-    
+
 }
 // console.log(temp_arr);
 
 
-//20.5_3 Sort an array problems and solution
+
+let names = ['abu', 'bakkar', 'siddique', 'riki', 'ahmed']
+
+let temp_array = []
+// console.log(names);
+for (let i = 0; i < names.length; i++) {
+    temp_array.unshift(names[i])
+}
+
+console.log(temp_array);
+//[ 'ahmed', 'riki', 'siddique', 'bakkar', 'abu' ]
