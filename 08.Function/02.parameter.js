@@ -64,13 +64,13 @@
 
 //return
 
-function add(a, b) {
-    addition = a + b
-    return addition
-}
+// function add(a, b) {
+//     addition = a + b
+//     return addition
+// }
 
-let theResult = add(5, 5)
-console.log(theResult);
+// let theResult = add(5, 5)
+// console.log(theResult);
 
 
 //21-6 Recap and conditional return of odd and even
@@ -89,24 +89,89 @@ console.log(theResult);
 
 //Conditional Return:
 
-function isEven(number) {
-    if (number % 2 === 0) {
+// function isEven(number) {
+//     if (number % 2 === 0) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
+// console.log(isEven(5));
+// console.log(isEven(120));
+
+// function isOdd(number) {
+//     if (number % 2 === 1) {
+//         return true
+//     }
+//     return false
+// }
+// console.log(isOdd(5));
+// console.log(isOdd(44));
+
+
+
+//21-7 Different types of parameters for a function
+
+//various parameter:
+
+//Q: For a given string tell me 
+//whether it has even number of character or not.
+
+// function evenSizedString(str) {
+
+//     let size = str.length;
+//     console.log(str, 'length:', size);
+
+//     if (size % 2 === 0) {
+//         console.log('Even Size String!');
+
+//     }
+//     else {
+//         console.log('Odd Size String!');
+
+//     }
+
+// }
+
+// evenSizedString('Hello World!')
+// evenSizedString('Abu')
+
+
+
+function isItEvenString(str) {
+
+    let size = str.length;
+    if (size % 2 === 0) {
         return true
     }
     else {
         return false
     }
+
 }
 
-console.log(isEven(5));
-console.log(isEven(120));
+// let result = isItEvenString('abu')
+// console.log(result);
 
-function isOdd(number) {
-    if (number % 2 === 1) {
-        return true
+
+function doubleOrTriple(number, bol) {
+
+    if (bol === true) {
+        let result = number * 2
+        return result
     }
-    return false
+    else {
+        let result = number * 3
+        return result
+    }
 }
-console.log(isOdd(5));
-console.log(isOdd(44));
 
+// console.log(doubleOrTriple(5, true));
+// console.log(doubleOrTriple(5, false));
+
+
+function numberOfElement(numbers){
+    
+}
