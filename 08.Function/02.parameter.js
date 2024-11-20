@@ -172,6 +172,86 @@ function doubleOrTriple(number, bol) {
 // console.log(doubleOrTriple(5, false));
 
 
-function numberOfElement(numbers){
-    
+
+// function numberOfElement(numbers) {
+//     let len = numbers.length
+//     return len
+// }
+// let arrSize = numberOfElement([1, 2, 3, 4, 5, 6])
+// console.log(arrSize);
+
+
+// function getAge(person) {
+//     let age = person.age
+//     return age
+// }
+
+// let person = {
+//     age: 12,
+//     name: 'abu'
+// }
+
+// let obj = getAge(person)
+// console.log(obj);
+
+
+//21-8 Sum of all numbers in an array using function
+
+//  Objective: write a function to give me
+// the sum of all numbers in an array
+
+
+// function sumOfNumbers(num) {
+//     let size = num.length
+//     let sumValue = 0
+
+//     for (let i = 0; i < size; i++) {
+//         sumValue = sumValue + num[i]
+//     }
+
+//     return sumValue
+
+// }
+
+// let num = [1, 2, 3, 4, 5]
+// let sum = sumOfNumbers(num)
+// console.log("Sum of the numbers is ", sum);
+
+
+//21-9 Return all the even numbers of an array
+
+//create function that will return only
+// the even numbers.
+
+function evenNumbersOnly(number) {
+    let newArray = []
+    for (let num of number) {
+        if (num % 2 === 0) {
+            newArray.push(num)
+        }
+    }
+    return newArray
 }
+
+
+let arr = [1, 2, 3, 4, 5]
+console.log(evenNumbersOnly(arr));
+
+
+
+function sumOfEvenNumbers(numbers) {
+    let sum = 0;
+    for (const number of numbers) {
+        if (number % 2 === 0) {
+            console.log(number);
+            sum = sum + number;
+        }
+    }
+    return sum;
+}
+
+const sum = sumOfEvenNumbers(numbers);
+
+console.log('sum of the even numbers is', sum);
+
+//21-10 Function Summary and Practice Tasks
