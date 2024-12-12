@@ -371,18 +371,18 @@
 //30-8 Keys, values, entries, delete, seal, freeze
 
 //keys:
-const glass = {
-    name: 'glass',
-    color: 'golden',
-    price: 12,
-    isCleaned: true
-}
+// const glass = {
+//     name: 'glass',
+//     color: 'golden',
+//     price: 12,
+//     isCleaned: true
+// }
 
-console.log(glass);
+// console.log(glass);
 
-//keys:
-const theKeys = Object.keys(glass)
-console.log(theKeys);
+// //keys:
+// const theKeys = Object.keys(glass)
+// console.log(theKeys);
 
 //all properties name
 //[ 'name', 'color', 'price', 'isCleaned' ]
@@ -390,13 +390,13 @@ console.log(theKeys);
 
 //all properties value
 //values:
-const theValues = Object.values(glass)
-console.log(theValues);
+// const theValues = Object.values(glass)
+// console.log(theValues);
 //[ 'glass', 'golden', 12, true ]
 
 
-const theEntries = Object.entries(glass)
-console.log(theEntries);
+// const theEntries = Object.entries(glass)
+// console.log(theEntries);
 
 
 //array of array //2 dimensional array
@@ -439,11 +439,113 @@ console.log(theEntries);
 
 
 //seal:
-Object.seal(glass)
-glass.source = 'Bangladesh'
-glass.price = 10000
-delete glass.name
+// Object.seal(glass)
+// glass.source = 'Bangladesh'
+// glass.price = 10000
+// delete glass.name
 
-console.log(glass);
+// console.log(glass);
 
 //seal : existing properties change kora jabe but new properties create kor delete kora jabe nh.
+
+
+
+//30-9 for of, for in, Module Summary and Practice Problems
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// for (let num of numbers) {
+// console.log(num);
+//}
+
+// $ node 01_ES6_Intro.js 
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+
+// const name = 'Abu Bakkar Siddique'
+// for (let nam of name) {
+//     console.log(nam);
+// }
+
+// $ node 01_ES6_Intro.js 
+// A
+// b
+// u
+
+// B
+// a
+// k
+// k
+// a
+// r
+
+// S
+// i
+// d
+// d
+// i
+// q
+// u
+// e
+
+
+//for of => array and string
+//for in => object
+
+// const student = {
+//     name: 'Abu Bakkar Siddique',
+//     id: 121212,
+//     isLoggedIn: true,
+//     city: 'Chittagong'
+// }
+
+// console.log(student);
+
+// for (let key in student) {
+//     console.log(key);
+// }
+
+// keys:
+// name
+// id
+// isLoggedIn
+// city
+
+
+// for (let key in student) {
+//     let value = student[key]
+//     console.log(key, value);
+// }
+
+// $ node 01_ES6_Intro.js
+// name Abu Bakkar Siddique
+// id 121212
+// isLoggedIn true
+// city Chittagong
+
+
+//Another way:
+// const student_2 = {
+//     name: 'Abu Bakkar Siddique',
+//     id: 121212,
+//     isLoggedIn: true,
+//     city: 'Chittagong'
+// }
+
+// const keys = Object.keys(student_2)
+// console.log(keys);
+//[ 'name', 'id', 'isLoggedIn', 'city' ]
+
+// for (let key of keys) {
+//     // console.log(key);
+//     let value = student_2[key]
+//     console.log(pair);
+// }
