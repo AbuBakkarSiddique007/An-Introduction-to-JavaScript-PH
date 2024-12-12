@@ -17,6 +17,15 @@
 // money = 15
 // console.log(money);
 
+// let name = 'Abu Bakkar Siddique'
+
+// let age = 24
+// let isLoggedIn = true
+// let city = 'Chittagong'
+
+// console.log(name, age, isLoggedIn, city);
+// console.log('------------------------------------');
+// console.table([name, age, isLoggedIn, city])
 
 //Array:
 // const numbers = [1, 2, 3, 4, 5, 6]
@@ -188,5 +197,185 @@
 // console.log(add_3(10, 20));
 // console.log(multiplication(10, 2, 3, 5));
 
+
+
 //30-5 More Arrow functions and big arrow function
 
+
+// const difference = (a, b) => a - b
+// const diff = difference(21, 20)
+// console.log(diff);
+
+
+// const multiply = (first, second, third) => first * second * third
+// const multiplication = multiply(1, 2, 3)
+// console.log(multiplication);
+
+// console.table([diff, multiplication])
+
+
+// ┌─────────┬────────┐
+// │ (index) │ Values │
+// ├─────────┼────────┤
+// │ 0       │ 1      │
+// │ 1       │ 6      │
+// └─────────┴────────┘
+
+
+//person => take a object input:
+// const getAge = (person) => person.age
+// const student = {
+//     name: 'Abu Bakkar Siddique',
+//     age: 24,
+//     isLoggedIN: true
+// }
+
+// let age = getAge(student)
+// console.log(age);
+
+
+//numbers => take a array input:
+// const getThird = numbers => numbers[2]
+
+// const numArray = [1, 2, 34, 5, 23, 56]
+
+// let third = getThird(numArray)
+// console.log(third);
+
+//No parameter:
+// const getPI = () => Math.PI
+// console.log(getPI());
+// console.log(getPI().toFixed(2));
+
+
+//Large arrow function:
+// const doMath = (x, y, z) => {
+//     const sum = x + y + z
+//     const multiply = x * y * z
+//     const result = sum + multiply
+
+//     return result
+// }
+
+// let result = doMath(10, 20, 20)
+// console.log(result);
+
+
+
+//30-6 Spread operator, array max, copy arrays
+
+
+//spread operator(...):
+// const max = Math.max(21, 33, 24, 1, 2, 3, 4, 56, 6, 7, 76)
+
+// console.log(max);   //76
+
+// const array = [12, 33, 24, 4, 2, 1, 5, 64, 78]
+// console.log(array); //full array ta ke return  korbe.
+// [
+//     12, 33, 24,  4, 2,
+//      1,  5, 64, 78
+//   ]
+
+// console.log(...array);  // just array element  gula ke return  korbe.
+//12 33 24 4 2 1 5 64 78
+
+// console.log(Math.max(array));   //NaN
+// console.log(Math.max(...array));    //78
+
+
+//use spread operator to copy:
+
+// const friend_1 = [1, 2, 3, 4, 5]
+
+// const friend_2 = friend_1
+// friend_2.push(6)
+// console.log(friend_2);
+
+// console.log(friend_1);
+
+//friend_1, friend_2 2tar output oi same:
+// [ 1, 2, 3, 4, 5, 6 ]
+// [ 1, 2, 3, 4, 5, 6 ]
+//cause non-primitive data gula same reference dhore rake.
+
+//To overcome from this:
+// const friend_2 = [...friend_1]  //copying
+// friend_2.push(10)
+
+// console.log(friend_1);  //[ 1, 2, 3, 4, 5 ]
+// console.log(friend_2);  //[ 1, 2, 3, 4, 5, 10 ]
+
+// const friend_3 = [...friend_1, 30] //add Extra element while copying
+// console.log(friend_3);  //[ 1, 2, 3, 4, 5, 30 ]
+
+// let friend_5 = [1, 2, 3, 4, ...friend_3, 10, 20]
+// console.log(friend_5);
+
+// [
+//     1,  2, 3, 4,  1,
+//     2,  3, 4, 5, 30,
+//    10, 20
+//  ]
+
+
+
+//30-7 (advanced) Object and Array Destructure
+
+//Object Destructure:
+
+// const actor = {
+//     name: "Sakib Khan",
+//     age: 40,
+//     phone: '0183566542',
+//     money: 2221212212
+// }
+
+// const phone = actor.phone
+// const name = actor.name
+// const age = actor.age
+
+// console.log(phone);
+// console.log(name);
+// console.log(age);
+
+// const { name } = actor
+// const { age, phone: mobile } = actor
+
+// console.log(name);
+// console.log(age);
+// // console.log(phone);
+
+// console.log(mobile); //phone: mobile
+
+
+//Array Destructuring:
+// const numbers = [10, 20]
+
+// const [first, second] = numbers
+// console.log(first, second); //10 20
+
+
+// const [x, y] = [40, 50]
+// console.log(x, y);  //40 50
+
+
+// function doubleIt(a, b) {
+//     return [a * 2, b * 2]
+// }
+
+// const [prothom, ditiyo] = doubleIt(6, 9)
+// console.log(prothom, ditiyo);   //12 18
+
+
+//30-8 Keys, values, entries, delete, seal, freeze
+
+//keys:
+const glass = {
+    name: 'glass',
+    color: 'golden',
+    price: 12,
+    isCleaned: true
+}
+
+console.log(glass);
