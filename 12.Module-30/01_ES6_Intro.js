@@ -379,3 +379,71 @@ const glass = {
 }
 
 console.log(glass);
+
+//keys:
+const theKeys = Object.keys(glass)
+console.log(theKeys);
+
+//all properties name
+//[ 'name', 'color', 'price', 'isCleaned' ]
+
+
+//all properties value
+//values:
+const theValues = Object.values(glass)
+console.log(theValues);
+//[ 'glass', 'golden', 12, true ]
+
+
+const theEntries = Object.entries(glass)
+console.log(theEntries);
+
+
+//array of array //2 dimensional array
+// [
+//     [ 'name', 'glass' ],
+//     [ 'color', 'golden' ],
+//     [ 'price', 12 ],
+//     [ 'isCleaned', true ]
+//   ]
+
+
+
+//Delete property from object:
+// delete glass.isCleaned;
+// console.log(glass);
+//{ name: 'glass', color: 'golden', price: 12 }
+
+//Delete in another way:
+//existing object tekhe specific properties remove kore
+//new rekta object create kora.
+
+// const {isCleaned, ...rest} = glass
+// console.log(glass);
+//{ name: 'glass', color: 'golden', price: 12 }
+
+
+
+//freeze: (khono properties change or remove korte dibo nh)
+
+// Object.freeze(glass)
+// glass.source = 'Bangladesh'
+// glass.price = 10000
+// delete glass.name
+
+// console.log(glass);
+
+//{ name: 'glass', color: 'golden', price: 12, isCleaned: true }
+//can not add the source properties cause i we freeze the object.
+
+
+
+//seal:
+Object.seal(glass)
+glass.source = 'Bangladesh'
+glass.price = 10000
+delete glass.name
+
+console.log(glass);
+
+//seal : existing properties change kora jabe but new properties create kor delete kora jabe nh.
