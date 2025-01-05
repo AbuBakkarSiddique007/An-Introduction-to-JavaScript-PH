@@ -163,3 +163,172 @@ Falsy:
 
 
 //32-5 Block scope global scope simple understanding of Hoisting
+//scope:
+
+// function add(a, b){
+//     const total = a+b;
+//     if(b>5){
+//         const sum = 25 + a +b;
+//     }
+//     else{
+//         const sum = 5 + a + b;
+//         var current = sum;
+//     }
+//     console.log(current);
+//     return total;
+// }
+// console.log(a,b);
+// console.log(total);
+// add(5, 3);
+
+
+//hoisting:
+// print5();
+// console.log(print10);
+// print10();
+// for(let i = 0; i< 5; i++){
+//     // console.log(i);
+// }
+// // console.log('outside', i);
+
+// function print5(){
+//     console.log('inside print5', 5);
+// }
+// var print10 = function(){
+//     console.log('inside print10', 10);
+// }
+
+
+
+//32-6 (advanced) Closure, encapsulation, private variable
+
+//closer: explore more ***
+
+// function kitchen(){
+//     let roast = 0;
+//     return function(){
+//         roast++;
+//         return roast;
+//     }
+// }
+
+// const firstServer = kitchen();
+// console.log(firstServer());
+// console.log(firstServer());
+// console.log(firstServer());
+// console.log(firstServer());
+
+
+//32-7 (optional) Callback function and pass different functions
+
+//callback:
+
+// function greeting(greetingHandler, name){
+//     greetingHandler(name);
+// }
+// const name = 'Halim mama';
+// const numbers = [45, 54, 78];
+// const laptop = {price: 45000, brand: 'lenovo', memory: '8gb'};
+// function greetingHandler(name){
+//     console.log('Good Morning', name);
+// }
+
+// function greetEvening(name){
+//     console.log('Good Evening', name);
+// }
+
+// function greetNight(name){
+//     console.log('Good Night', name);
+// }
+
+// greeting(greetingHandler, 'Tom Hanks');
+// greeting(greetingHandler, 'Tom Brady');
+// greeting(greetingHandler, 'Tom Cruise');
+// greeting(greetEvening, 'Tom Solaiman');
+// greeting(greetEvening, 'Tom Salman');
+// greeting(greetNight, 'Rasel')
+
+
+// function submitHandler(){
+//     console.log('submit button clicked')
+// }
+// document.getElementById('btn-submit').addEventListener('click',submitHandler)
+
+
+
+
+//32-8 (advanced) function arguments pass by reference pass by value
+
+//arguments:
+
+// function sum(a, b, c) {
+// console.log(arguments);
+// console.log(typeof arguments);  //object
+// console.log(arguments[3]);  //34
+//we can use loop (for of, not map , filter) in arguments
+//remind it, its array like object, NOT array.
+//So, we can not use array's operation like push()
+
+// arguments.push(232) //Error
+
+//     const args = [...arguments] //[ 1, 2, 3, 34, 4, 3 ]
+//     console.log(args);
+
+
+
+//     const result = a + b + c
+//     return result
+// }
+
+// console.log(arguments);
+
+// const total_1 = sum(1, 2, 3)
+// console.log(total_1); //6
+
+// const total_2 = sum(1, 2, 3, 34, 4, 3,) //[Arguments] { '0': 1, '1': 2, '2': 3, '3': 34, '4': 4, '5': 3 } // array like object.
+// console.log(total_2);   //6
+
+// console.log(typeof sum);    //function
+// console.log(sum.length);    //3
+
+
+
+//pass by js:
+
+let num1 = 10
+let num2 = 20
+
+function multiply(a, b) {
+
+    a = 5
+    const result = a + b
+
+    console.log(a, b);  //5 20
+
+
+    return result
+}
+
+const output = multiply(num1, num2)
+console.log(output);    //30
+console.log(output);   // 25 // a =5
+
+console.log(num1);  //10
+
+
+//Non-primitive: object and array are pass by reference
+//Primitive: primitive types are pass by value.
+
+//Non-Primitive:
+// block scope e khono variable er value change korle oita outer-scope eo pawa jai(change hoye jai).
+// but primitive type e change hoi nh.
+
+
+//Explore more:
+//pass by value
+//pass by reference
+
+
+//32-8_1 Pass by value and pass by reference visualization
+//32-9 Error Debug and Money master diaster
+
